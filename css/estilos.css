@@ -1,11 +1,45 @@
+/*reset do css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-    background-image: url('https://img.olhardigital.com.br/uploads/acervo_imagens/2019/09/r16x9/20190910100427_1200_675_-_galaxia.jpg');
-    background-size: auto 110vh;
+    background-image: url('../img/fundo.jpg');
+    background-size: auto 100vh;
     font-family: Arial;
     height: 100vh;
+    font-size: 12px;
+  }
+  /*Se a tela tiver pelo menos 400px vai carrgae estes estilos*/
+  @media (min-width:400px){
+    body{
+      font-size: 14px;
+    }
+  }
+  /*breakpoint*/
+  @media (min-width:600px){
+    body{
+      font-size: 18px;
+    }
+  }
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width:900px){
+    header{
+      height: 50vh;
+    }
   }
   .menu{
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   .menu ul{
     display: flex;
@@ -13,6 +47,11 @@ body{
   }
   .menu li {
     list-style: none;
+  }
+  .menu a{
+    
+  display: block;
+  padding: 10px;
   }
   a{
     color: teal;
@@ -26,6 +65,13 @@ body{
     color: whitesmoke;
     text-align: center;
   }
+  .site-title{
+    font-size: 4em;
+  }
   .site-subtitle{
     font-style: italic;
+  }
+  .img-portfolio{
+    height: 100px;
+    width: 100px;
   }
